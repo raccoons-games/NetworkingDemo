@@ -1,0 +1,19 @@
+{
+    "name": "NetworkingDemo",
+    "rootNamespace": "",
+    "references": [
+        "GUID:49579686e6f5c674384bf8725223802f",
+        "GUID:0d8beb7f090555447a6cf5ce9e54dbb4",
+        "GUID:ec03ca4dd96a8824b8a2499a06a3a9dc",
+        "GUID:5a10fb53bda08b04389b10ce88d7349e"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
