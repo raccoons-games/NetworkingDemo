@@ -9,11 +9,14 @@ namespace Raccoons.Networking.Api.WebRequests.UnityWebRequests
         public static TaskAwaiter<UnityWebRequest.Result> GetAwaiter(this UnityWebRequestAsyncOperation reqOp)
         {
             TaskCompletionSource<UnityWebRequest.Result> tsc = new();
-            reqOp.completed += asyncOp => tsc.TrySetResult(reqOp.webRequest.result);
-
             if (reqOp.isDone)
+            {
                 tsc.TrySetResult(reqOp.webRequest.result);
-
+            }
+            else
+            {
+                reqOp.completed += asyncOp => tsc.TrySetResult(reqOp.webRequest.result);
+            }
             return tsc.Task.GetAwaiter();
         }
     }

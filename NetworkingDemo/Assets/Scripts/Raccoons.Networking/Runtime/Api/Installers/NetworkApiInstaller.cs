@@ -16,7 +16,7 @@ namespace Raccoons.Networking.Api.Installers
     {
 
         [SerializeField]
-        private BaseFileInstance configFile;
+        private BaseFileReader configFile;
         public override void InstallBindings()
         {
             Container.Bind<TApiClient>().FromSubContainerResolve().ByMethod(BindApiClient).AsSingle();

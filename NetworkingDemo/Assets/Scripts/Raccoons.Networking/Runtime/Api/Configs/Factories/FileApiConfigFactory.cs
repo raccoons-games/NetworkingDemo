@@ -6,10 +6,10 @@ namespace Raccoons.Networking.Api.Configs.Factories
     public class FileApiConfigFactory<TConfig> : BaseApiConfigFactory<TConfig>
         where TConfig : BaseApiConfig
     {
-        private readonly BaseFileInstance _baseFileInstance;
+        private readonly BaseFileReader _baseFileInstance;
         private readonly ISerializer _serializer;
 
-        public FileApiConfigFactory(BaseFileInstance baseFileInstance, ISerializer serializer)
+        public FileApiConfigFactory(BaseFileReader baseFileInstance, ISerializer serializer)
         {
             _baseFileInstance = baseFileInstance;
             _serializer = serializer;
