@@ -1,0 +1,8 @@
+  
+{
+	"name": "com.raccoons.files",
+	"displayName": "Raccoons Files",
+	"version": "0.1",
+	"description": "File framework for Raccoons Framework",
+	"unity": "2018.3" 
+}
