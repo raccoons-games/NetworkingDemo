@@ -8,6 +8,7 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using Zenject;
 
 namespace SocketCubes.Networking
@@ -28,8 +29,14 @@ namespace SocketCubes.Networking
         private Thread _listeningThread;
 
         private bool _isConnected = false;
+        private Camera _mainCamera;
 
         public ISerializer Serializer { get; private set; }
+
+        private void Start()
+        {
+            _mainCamera = Camera.main;
+        }
 
         private static Socket ConnectSocket(string server, int port)
         {
@@ -130,9 +137,9 @@ namespace SocketCubes.Networking
             lock (_netDataLock)
             {
                 json = Serializer.Serialize(_netData);
+                byte[] bytes = Encoding.UTF8.GetBytes(json);
+                _udpClient.Send(bytes, bytes.Length);
             }
-            byte[] bytes = Encoding.UTF8.GetBytes(json);
-            _udpClient.Send(bytes, bytes.Length);
         }
 
         private void ApplyNetData()
@@ -148,6 +155,16 @@ namespace SocketCubes.Networking
         {
             _listeningThread?.Abort();
             _udpClient?.Close();
+        }
+
+        private void OnMouseDrag()
+        {
+            Vector3 inputMousePos = Input.mousePosition;
+            inputMousePos.z = transform.position.z - _mainCamera.transform.position.z;
+            Vector3 mousePos = _mainCamera.ScreenToWorldPoint(inputMousePos);
+            transform.position = mousePos;
+            print($"{Input.mousePosition} - {transform.position}");
+
         }
     }
 }
