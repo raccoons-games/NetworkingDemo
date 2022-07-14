@@ -1,4 +1,4 @@
-﻿using Raccoons.Networking.Serialization;
+﻿using Raccoons.Serialization;
 using System.Threading;
 using System.Threading.Tasks;
 using UnityEngine;

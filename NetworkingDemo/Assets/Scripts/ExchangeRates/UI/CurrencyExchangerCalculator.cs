@@ -41,6 +41,11 @@ namespace ExchangeRates.UI
 
         private async void Start()
         {
+#if RACCOONS_SERIALIZATION_NEWTONSOFTJSON
+
+#else
+
+#endif
             calculateButton.onClick.AddListener(Calculate);
             ipText.text = "IP: "+await Client.GetApiIP();
         }

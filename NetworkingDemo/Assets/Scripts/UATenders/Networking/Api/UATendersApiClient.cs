@@ -1,6 +1,6 @@
 using Raccoons.Networking.Api.Clients;
 using Raccoons.Networking.Api.WebRequests;
-using Raccoons.Networking.Serialization;
+using Raccoons.Serialization;
 using System.Threading.Tasks;
 
 namespace UATenders.Networking.Api

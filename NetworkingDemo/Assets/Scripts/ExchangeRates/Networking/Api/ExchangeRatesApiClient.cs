@@ -1,7 +1,7 @@
 using ExchangeRates.Networking.Api.Responses;
 using Raccoons.Networking.Api.Clients;
 using Raccoons.Networking.Api.WebRequests;
-using Raccoons.Networking.Serialization;
+using Raccoons.Serialization;
 using System;
 using System.Collections;
 using System.Collections.Generic;

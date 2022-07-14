@@ -3,8 +3,8 @@ using ExchangeRates.Networking.Api;
 using Raccoons.Networking.Api.Installers;
 using Raccoons.Networking.Api.WebRequests;
 using Raccoons.Networking.Api.WebRequests.UnityWebRequests;
-using Raccoons.Networking.Serialization;
-using Raccoons.Networking.Serialization.Json;
+using Raccoons.Serialization;
+using Raccoons.Serialization.Json;
 using UnityEngine;
 using Zenject;
 

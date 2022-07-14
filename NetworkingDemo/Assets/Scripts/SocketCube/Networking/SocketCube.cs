@@ -1,5 +1,5 @@
-using Raccoons.Networking.Serialization;
-using Raccoons.Serialization.Runtime.Json;
+using Raccoons.Serialization;
+using Raccoons.Serialization.Json;
 using System;
 using System.Collections;
 using System.Collections.Generic;

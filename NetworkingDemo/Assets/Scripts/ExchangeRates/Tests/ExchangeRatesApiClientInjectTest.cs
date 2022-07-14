@@ -1,4 +1,4 @@
-using Raccoons.Networking.Serialization;
+using Raccoons.Serialization;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

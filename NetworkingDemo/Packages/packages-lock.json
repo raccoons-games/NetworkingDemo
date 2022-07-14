@@ -1,5 +1,19 @@
 {
   "dependencies": {
+    "com.raccoons.serialization": {
+      "version": "file:Raccoons.Serialization",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
+    "com.raccoons.serialization.newtonsoftjson": {
+      "version": "file:Raccoons.Serialization.NewtonsoftJson",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.raccoons.serialization": ""
+      }
+    },
     "com.unity.collab-proxy": {
       "version": "1.15.16",
       "depth": 0,

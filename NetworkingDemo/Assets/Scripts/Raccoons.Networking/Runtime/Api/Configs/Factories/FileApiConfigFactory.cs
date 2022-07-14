@@ -1,5 +1,5 @@
 ﻿using Raccoons.Files;
-using Raccoons.Networking.Serialization;
+using Raccoons.Serialization;
 
 namespace Raccoons.Networking.Api.Configs.Factories
 {
