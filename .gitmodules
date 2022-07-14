@@ -1,0 +1,6 @@
+[submodule "NetworkingDemo/Packages/Raccoons.Serialization"]
+	path = NetworkingDemo/Packages/Raccoons.Serialization
+	url = https://github.com/thevitalife/Raccoons.Serialization.git
+[submodule "NetworkingDemo/Packages/Raccoons.Serialization.NewtonsoftJson"]
+	path = NetworkingDemo/Packages/Raccoons.Serialization.NewtonsoftJson
+	url = https://github.com/thevitalife/Raccoons.Serialization.NewtonsoftJson.git
