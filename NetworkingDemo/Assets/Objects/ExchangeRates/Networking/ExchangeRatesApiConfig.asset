@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dfbc248c423af2a43b7668786e13a926, type: 3}
+  m_Script: {fileID: 11500000, guid: 092956088a05fe049b5320bf483089c1, type: 3}
   m_Name: ExchangeRatesApiConfig
   m_EditorClassIdentifier: 
-  filePath: Api/ExchangeRates/ExchangeRatesApiConfig.json
+  streamingAssetsPath: Api/ExchangeRates/ExchangeRatesApiConfig.json

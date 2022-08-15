@@ -1,5 +1,13 @@
 {
   "dependencies": {
+    "com.raccoons.files": {
+      "version": "file:Raccoons.Files",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.raccoons.serialization": ""
+      }
+    },
     "com.raccoons.serialization": {
       "version": "file:Raccoons.Serialization",
       "depth": 0,

@@ -1,4 +1,5 @@
 ﻿using Raccoons.Files;
+using Raccoons.Files.Instances;
 using Raccoons.Networking.Api.Clients;
 using Raccoons.Networking.Api.Configs;
 using Raccoons.Networking.Api.Configs.Factories;
@@ -14,9 +15,8 @@ namespace Raccoons.Networking.Api.Installers
         where TApiConfig : BaseApiConfig
         where TApiClient : ApiClient<TApiConfig>
     {
-
         [SerializeField]
-        private BaseFileReader configFile;
+        private BaseFileAsset configFile;
         public override void InstallBindings()
         {
             Container.Bind<TApiClient>().FromSubContainerResolve().ByMethod(BindApiClient).AsSingle();

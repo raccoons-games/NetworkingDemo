@@ -1,4 +1,5 @@
 ﻿using Raccoons.Files;
+using Raccoons.Files.Instances;
 using Raccoons.Serialization;
 
 namespace Raccoons.Networking.Api.Configs.Factories
@@ -6,10 +7,10 @@ namespace Raccoons.Networking.Api.Configs.Factories
     public class FileApiConfigFactory<TConfig> : BaseApiConfigFactory<TConfig>
         where TConfig : BaseApiConfig
     {
-        private readonly BaseFileReader _baseFileInstance;
+        private readonly BaseFileAsset _baseFileInstance;
         private readonly ISerializer _serializer;
 
-        public FileApiConfigFactory(BaseFileReader baseFileInstance, ISerializer serializer)
+        public FileApiConfigFactory(BaseFileAsset baseFileInstance, ISerializer serializer)
         {
             _baseFileInstance = baseFileInstance;
             _serializer = serializer;
@@ -17,7 +18,7 @@ namespace Raccoons.Networking.Api.Configs.Factories
 
         public override TConfig Create()
         {
-            return _baseFileInstance.LoadSerialized<TConfig>(_serializer);
+            return _serializer.Deserialize<TConfig>(_baseFileInstance.ReadAllText());
         }
     }
 }
